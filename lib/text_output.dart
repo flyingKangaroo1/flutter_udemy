@@ -8,6 +8,10 @@ class TextOutput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(mainText, textAlign: TextAlign.center);
+    return Text(
+      mainText, 
+      style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold), 
+      textAlign: TextAlign.center,
+    );
   }
 }

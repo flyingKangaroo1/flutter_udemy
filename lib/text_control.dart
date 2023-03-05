@@ -28,6 +28,7 @@ class _TextControlState extends State<TextControl> {
   Widget build(BuildContext context) {
     return Column(children: [
       Container(
+        margin: EdgeInsets.all(10),
         width: double.infinity,
         child: TextOutput(_texts[textIndex]),
       ),

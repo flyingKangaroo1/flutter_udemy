@@ -26,6 +26,7 @@ class _TextControlState extends State<TextControl> {
 
   @override
   Widget build(BuildContext context) {
+    // Column needed to render more than one widget
     return Column(children: [
       Container(
         margin: EdgeInsets.all(10),

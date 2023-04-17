@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_udemy/expenses.dart';
+import 'package:flutter_udemy/widgets/expenses.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
-      home: Expenses(),
+    MaterialApp(
+      theme: ThemeData(useMaterial3: true),
+      home: const Expenses(),
     ),
   );
 }

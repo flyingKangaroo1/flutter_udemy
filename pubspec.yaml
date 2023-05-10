@@ -37,6 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   uuid: ^3.0.7
   intl: ^0.18.0
+  url_launcher: ^6.1.10
+  image_picker: ^0.8.7+4
+  file_picker: ^5.2.11
+  location: ^4.4.0
 
 dev_dependencies:
   flutter_test:

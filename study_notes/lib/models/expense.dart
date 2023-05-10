@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 final formatter = DateFormat.yMd();
-
+//고유한 id 만들어주는 library
 const uuid = Uuid();
 
 enum Category { food, travel, leisure, work }
@@ -40,5 +40,34 @@ class Expense {
   // => Properties that are dynamically derived, based on other class properties.
   String get formattedDate {
     return formatter.format(date);
+  }
+}
+
+// for building chart, get sum of each category
+class ExpenseBucket {
+  const ExpenseBucket({
+    required this.category,
+    required this.expenses,
+  });
+
+  //add extra constructor function to class
+  //alternative to default constructor function
+  //where() filters list
+  ExpenseBucket.forCategory(List<Expense> allExpenses, this.category) 
+    : expenses = allExpenses
+          .where((expense) => (expense.category == category) )
+          .toList();
+
+  final Category category;
+  final List<Expense> expenses;
+
+  double get totalExpenses {
+    double sum = 0;
+
+    //for (var i = 0; i < expense.length; i++)
+    for (final expense in expenses) {
+      sum += expense.amount;  
+    }
+    return sum;
   }
 }
